@@ -4,6 +4,7 @@ use Ninthspace\Action\Exceptions\AuthorisationException;
 use Ninthspace\Action\Tests\Support\ActionClass;
 use Ninthspace\Action\Tests\Support\ActionClassWithAuthorisationParameters;
 use Ninthspace\Action\Tests\Support\ActionClassWithSuccessfulAuthorisation;
+use Ninthspace\Action\Tests\Support\ActionClassWithSuccessfulAuthorization;
 use Ninthspace\Action\Tests\Support\ActionClassWithUnsuccessfulAuthorisation;
 use Ninthspace\Action\Tests\Support\EmptyActionClass;
 
@@ -27,6 +28,12 @@ test('can execute an action with arguments', function () {
 
 test('can authorise an action', function () {
     $result = (new ActionClassWithSuccessfulAuthorisation())->run();
+
+    assertEquals(123, $result);
+});
+
+test('can authorize (sp!) an action', function () {
+    $result = (new ActionClassWithSuccessfulAuthorization())->run();
 
     assertEquals(123, $result);
 });
