@@ -1,11 +1,11 @@
-# Title
+# Action
 
 ![Tests](https://github.com/ninthspace/action/workflows/Tests/badge.svg?branch=master)
 [![Coverage](https://codecov.io/gh/ninthspace/action/branch/master/graph/badge.svg)](https://codecov.io/gh/ninthspace/action)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ninthspace/action.svg?style=flat-square)](https://packagist.org/packages/ninthspace/action)
 [![Total Downloads](https://img.shields.io/packagist/dt/ninthspace/action.svg?style=flat-square)](https://packagist.org/packages/ninthspace/action)
 
-Summary goes here
+A simple Action class for PHP.
 
 ## Installation
 
