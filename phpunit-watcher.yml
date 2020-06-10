@@ -7,6 +7,7 @@ notifications:
   passingTests: true
   failingTests: true
 phpunit:
-  binaryPath: vendor/bin/phpunit
+  binaryPath: vendor/bin/pest
   arguments: '--stop-on-failure --testdox'
   timeout: 180
+hideManual: true
