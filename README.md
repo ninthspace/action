@@ -17,7 +17,38 @@ composer require ninthspace/action
 
 ## Usage
 
-TBD
+An Action class is just a way of encapsulating repeatable or reusable code, which is usually defined or extracted from other classes to improve readability or testability.
+
+To use this package simply extend it:
+
+```
+class MyAction extends \Ninthspace\Action
+{
+}
+```
+
+Doing so will give you two additional methods:
+
+* `handle` which is a method you should write to perform the action, and,
+* `authorise` which is an optional method you can write that returns if the action is authorised (by the user, for example)
+
+If you create `authorise` and it fails, a `\Ninthspace\Action\Exceptions\AuthorisationException` will be raised.
+
+To invoke an action call its `run` method:
+
+```
+class MyAction extends \Ninthspace\Action
+{
+    public function handle()
+    {
+        return 'done';
+    }
+}
+
+(new MyAction())->run() // returns "done";
+
+```
+
 
 ## Changelog
 

@@ -44,7 +44,7 @@ jobs:
           APP_ENV: testing
 
       - name: Run tests
-        run: ./vendor/bin/phpunit
+        run: ./vendor/bin/pest
         env:
           APP_ENV: testing
           DB_DATABASE: test
