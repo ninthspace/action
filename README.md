@@ -1,7 +1,7 @@
 # Title
 
 ![Tests](https://github.com/ninthspace/action/workflows/Tests/badge.svg?branch=master)
-[![Coverage](https://codecov.io/gh/ninthspace/action/branch/master/graph/badge.svg)](https://codecov.io/gh/ninthspace/dweller)
+[![Coverage](https://codecov.io/gh/ninthspace/action/branch/master/graph/badge.svg)](https://codecov.io/gh/ninthspace/action)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ninthspace/action.svg?style=flat-square)](https://packagist.org/packages/ninthspace/action)
 [![Total Downloads](https://img.shields.io/packagist/dt/ninthspace/action.svg?style=flat-square)](https://packagist.org/packages/ninthspace/action)
 
@@ -49,6 +49,7 @@ class MyAction extends \Ninthspace\Action
 
 ```
 
+You can pass arguments into the `run` method and then update the `handle` function definition accordingly.
 
 ## Changelog
 
