@@ -6,6 +6,8 @@ use Ninthspace\Action\Tests\Support\ActionClassWithAuthorisationParameters;
 use Ninthspace\Action\Tests\Support\ActionClassWithSuccessfulAuthorisation;
 use Ninthspace\Action\Tests\Support\ActionClassWithSuccessfulAuthorization;
 use Ninthspace\Action\Tests\Support\ActionClassWithUnsuccessfulAuthorisation;
+use Ninthspace\Action\Tests\Support\ActionClassWithUnsuccessfulAuthorisationCustomException;
+use Ninthspace\Action\Tests\Support\CustomException;
 use Ninthspace\Action\Tests\Support\EmptyActionClass;
 
 test('can instantiate ActionClass', function () {
@@ -43,6 +45,12 @@ test('can authorise an action with exception', function () {
 
     assertEquals(123, $result);
 })->throws(AuthorisationException::class);
+
+test('can authorise an action with different exception', function () {
+    $result = (new ActionClassWithUnsuccessfulAuthorisationCustomException())->run();
+
+    assertEquals(123, $result);
+})->throws(CustomException::class);
 
 test('can authorise an action with parameters', function () {
     $result = (new ActionClassWithAuthorisationParameters())->run(true);

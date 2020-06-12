@@ -2,6 +2,7 @@
 
 namespace Ninthspace\Action;
 
+use Ninthspace\Action\Exceptions\AuthorisationException;
 use Ninthspace\Action\Traits\ResolvesAuthorisation;
 
 class Action

@@ -36,6 +36,15 @@ Doing so will give you two additional methods:
 
 If you create `authorise` and it fails, a `\Ninthspace\Action\Exceptions\AuthorisationException` will be raised.
 
+**Note:** If you want a different authorisation exception to be raised you can override it in your Action, thus:
+
+```php
+class MyAction extends \Ninthspace\Action
+{
+    public $authorisationException = \Illuminate\Auth\Access\AuthorizationException::class
+}
+```
+
 To invoke an action call its `run` method:
 
 ```php

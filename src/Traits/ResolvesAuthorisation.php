@@ -6,6 +6,8 @@ use Ninthspace\Action\Exceptions\AuthorisationException;
 
 trait ResolvesAuthorisation
 {
+    public $authorisationException = AuthorisationException::class;
+
     protected function resolveAuthorisation(...$args)
     {
         if (! $this->passesAuthorisation(...$args)) {
@@ -30,6 +32,6 @@ trait ResolvesAuthorisation
 
     protected function failedAuthorisation()
     {
-        throw new AuthorisationException('This action is unauthorised.');
+        throw new $this->authorisationException('This action is unauthorised.');
     }
 }
