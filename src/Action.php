@@ -17,12 +17,4 @@ class Action
 
         return $this->handle(...$args);
     }
-
-    /**
-     * @return mixed|null
-     */
-    public function handle()
-    {
-
-    }
 }
